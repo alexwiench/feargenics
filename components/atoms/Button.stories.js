@@ -9,6 +9,18 @@ export default {
 	 */
 	title: 'Button',
 	component: Button,
+	tags: ['autodocs'],
 };
 
-export const Primary = () => <Button primary>Button</Button>;
+export const Primary = {
+	args: {
+		label: 'Button',
+	},
+};
+
+export const Secondary = {
+	args: {
+		...Primary.args,
+		label: '😄👍😍💯',
+	},
+};

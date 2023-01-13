@@ -6,12 +6,12 @@
 	height: 40px;
 	padding: 12px 17px;
 	border-radius: 50px;
-	background-color: #de0a0a0d;
-	color: #222;
+	background-color: #af1717;
+	color: rgb(232, 232, 232);
 	font-size: 16px;
 	font-weight: 500;
 }
 
-.button :hover {
-	background-color: #2222221a;
+.button:hover {
+	background-color: #b03f3f;
 }
