@@ -1,10 +1,25 @@
 import Head from 'next/head';
 
+//data
+import { episodes } from '/data.js';
+
 //components
 import Layout from '../components/Layout';
 import HomeHero from '../components/organisms/HomeHero';
 
-export default function Home() {
+//not needed yet but will helpful when connecting to an api
+export async function getStaticProps() {
+	const mostRecentEpisode = episodes[0];
+
+	return {
+		props: {
+			episodes,
+			mostRecentEpisode,
+		},
+	};
+}
+
+export default function Home({ mostRecentEpisode, episodes }) {
 	return (
 		<>
 			<Head>
@@ -14,7 +29,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Layout>
-				<HomeHero />
+				<HomeHero data={mostRecentEpisode} />
 			</Layout>
 		</>
 	);
