@@ -6,6 +6,7 @@ import { episodes } from '/data.js';
 //components
 import Layout from '../components/Layout';
 import HomeHero from '../components/organisms/HomeHero';
+import EpisodeCarousel from '../components/organisms/EpisodeCarousel';
 
 //not needed yet but will helpful when connecting to an api
 export async function getStaticProps() {
@@ -30,6 +31,7 @@ export default function Home({ mostRecentEpisode, episodes }) {
 			</Head>
 			<Layout>
 				<HomeHero data={mostRecentEpisode} />
+				<EpisodeCarousel episodes={episodes} amount={3} />
 			</Layout>
 		</>
 	);
