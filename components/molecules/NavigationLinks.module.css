@@ -6,4 +6,8 @@
 	display: inline-block; /* Display the list items as inline blocks */
 	padding-left: 30px;
 	text-transform: uppercase;
+	color: rgb(245, 245, 245);
+	font-family: 'Rubik', sans-serif;
+	font-size: small;
+	font-weight: 600;
 }

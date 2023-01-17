@@ -1,0 +1,31 @@
+.bgWrap {
+	top: 0;
+	position: absolute;
+	height: 90vh;
+	width: 100vw;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.contentContainer {
+	height: 80vh;
+	/* text-transform: uppercase; */
+	color: rgb(245, 245, 245);
+	font-family: 'Rubik', sans-serif;
+	display: flex;
+}
+
+.centerContent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.headerText {
+	width: 550px;
+	height: 550px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
