@@ -1,9 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import EpisodeThumbnail from '../atoms/EpisodeThumbnail';
+
 import styles from './HomeHero.module.css';
 import backgroundImage from '../../public/images/HeaderBackground.jpg';
+
+import Button from '../atoms/Button';
+import EpisodeThumbnail from '../atoms/EpisodeThumbnail';
+
+import { Work_Sans } from '@next/font/google';
+const work = Work_Sans({ subsets: ['latin'] });
 
 export default function HomeHero({ data }) {
 	const { film, subtitle, shortDescription, thumbnail, title } = data;
@@ -22,6 +28,7 @@ export default function HomeHero({ data }) {
 					quality={100}
 					fill
 					sizes="100vw"
+					priority
 					style={{
 						objectFit: 'cover',
 					}}
@@ -29,19 +36,25 @@ export default function HomeHero({ data }) {
 			</div>
 			<div className={styles.centerContent}>
 				<div className={styles.contentContainer}>
-					<div className={styles.headerText}>
+					<div className={`${styles.headerText} ${work.className}`}>
+						<h2>Featured Episode</h2>
 						<h1>
-							{filmTitle} {releaseYear}
+							{filmTitle} ({releaseYear})
 						</h1>
-						<p>{title}</p>
-						<p>{subtitle}</p>
 						<p>{shortDescription}</p>
+						<div className={styles.ctaSection}>
+							<Button label="Listen Now" href="/listen"></Button>
+						</div>
 					</div>
-					<div>
-						<EpisodeThumbnail thumbnail={thumbnail} filmTitle={title} width={550} />
+					<div className={styles.thumbnail}>
+						<EpisodeThumbnail
+							thumbnail={thumbnail}
+							filmTitle={title}
+							width={2000}
+							aboveTheFold={true}
+						/>
 					</div>
 				</div>
-				{/* <button>Listen to Episode</button> */}
 			</div>
 		</div>
 	);

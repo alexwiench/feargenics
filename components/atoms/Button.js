@@ -3,12 +3,14 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 import styles from './Button.module.css';
+import { Work_Sans } from '@next/font/google';
+const work = Work_Sans({ subsets: ['latin'] });
 
 export default function Button({ label = 'button', href = '/' }) {
 	return (
 		<>
 			<Link href={href}>
-				<button className={styles.button} type="button">
+				<button className={`${styles.button} ${work.className}`} type="button">
 					{label}
 				</button>
 			</Link>
@@ -17,13 +19,6 @@ export default function Button({ label = 'button', href = '/' }) {
 }
 
 Button.propTypes = {
-	/**
-	 * Button contents
-	 */
 	label: PropTypes.string.isRequired,
-
-	/**
-	 * Link
-	 */
 	href: PropTypes.string,
 };

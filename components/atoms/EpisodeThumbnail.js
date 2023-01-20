@@ -12,6 +12,10 @@ export default function EpisodeThumbnail({ thumbnail, width, filmTitle, aboveThe
 			height={width}
 			alt={`${filmTitle} thumbnail`}
 			priority={aboveTheFold}
+			style={{
+				maxWidth: '100%',
+				height: 'auto',
+			}}
 		/>
 	);
 }
@@ -25,7 +29,7 @@ EpisodeThumbnail.propTypes = {
 
 EpisodeThumbnail.defaultProps = {
 	thumbnail: defaultThumbnail,
-	width: 500,
+	width: 1000,
 	filmTitle: 'Movie title missing, fallback',
 	aboveTheFold: false,
 };

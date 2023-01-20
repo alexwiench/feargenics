@@ -2,7 +2,8 @@ export const episodes = [
 	{
 		title: 'Episode 1: Movie Title',
 		subtitle: 'Subtitle',
-		shortDescription: 'Short description of the episode',
+		shortDescription:
+			'This time on Feargenics we dive into the world of The Neon Demon, a film directed by Nicolas Winding Refn. Known for his visually striking and often brutal films, Refn brings his signature style to this dark and twisted tale of ambition and beauty.',
 		description: 'Description of episode',
 		link: 'https://www.example.com/episode1',
 		guid: '1',
@@ -13,7 +14,7 @@ export const episodes = [
 		season: 1,
 		releaseDate: '2022-12-23',
 		film: {
-			title: 'Movie Title',
+			title: 'The Neon Demon',
 			releaseYear: 2022,
 			director: 'Director Name',
 			writer: 'Writer Name',
