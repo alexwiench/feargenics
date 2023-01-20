@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export default function Logo({ width = 188 }) {
 	return (
 		<>
-			<Image src={logo} alt="feargenics logo" width={width} />
+			<Image src={logo} alt="feargenics logo" width={width} placeholder="blur" priority />
 		</>
 	);
 }
