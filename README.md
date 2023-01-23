@@ -3,8 +3,8 @@ Feargenics is a horror film podcast. This is it's website.
 ## To Do
 
 - [ ] Decide on mobile version strategy
-- [ ] Homepage header
-- [ ] Homepage episode carousel
+- [x] Homepage header
+- [x] Homepage episode carousel
 - [ ] Footer
 - [ ] All episodes page
 - [ ] Individual episode layout
