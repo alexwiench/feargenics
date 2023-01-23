@@ -1,0 +1,37 @@
+.container {
+	width: 30%;
+	min-width: 15em;
+	color: whitesmoke;
+	padding: 2rem;
+	background-color: transparent;
+	transition: background-color 0.3s ease-in;
+	border: 1px solid whitesmoke;
+	border-radius: 1px;
+}
+
+.container:hover {
+	background-color: hsl(359, 69%, 10%);
+	border-radius: 1px;
+	transition: background-color 0.15s ease-out;
+}
+
+.container h1 {
+	font-size: xxx-large;
+	padding-top: 30px;
+}
+
+.container h2 {
+	color: #d82d31;
+	padding-top: 10px;
+}
+
+.container p {
+	font-size: large;
+	padding-top: 20px;
+}
+
+.container a {
+	text-decoration: underline;
+	padding-top: 30px;
+	display: inline-block;
+}

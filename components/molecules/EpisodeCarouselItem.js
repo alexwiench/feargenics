@@ -1,20 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 import EpisodeThumbnail from '../atoms/EpisodeThumbnail';
+import styles from './EpisodeCarouselItem.module.css';
 
 export default function EpisodeCarouselItem({ episode }) {
 	const { film, subtitle, shortDescription, thumbnail, title } = episode;
 	const { title: filmTitle, releaseYear } = film;
 	return (
 		<>
-			<h1>
-				{filmTitle} {releaseYear}
-			</h1>
-			<p>{title}</p>
-			<p>{subtitle}</p>
-			<p>{shortDescription}</p>
-			<EpisodeThumbnail thumbnail={thumbnail} filmTitle={title} />
-			<button>Listen to Episode</button>
+			<div className={styles.container}>
+				<EpisodeThumbnail thumbnail={thumbnail} filmTitle={title} />
+
+				<h1>
+					{filmTitle} ({releaseYear})
+				</h1>
+				<h2>{subtitle}</h2>
+				<p>{shortDescription}</p>
+				<Link href={title}>Listen to episode</Link>
+			</div>
 		</>
 	);
 }

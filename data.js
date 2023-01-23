@@ -1,7 +1,7 @@
 export const episodes = [
 	{
 		title: 'Episode 1: Movie Title',
-		subtitle: 'Subtitle',
+		subtitle: 'Only the wicked survive.',
 		shortDescription:
 			'This time on Feargenics we dive into the world of The Neon Demon, a film directed by Nicolas Winding Refn. Known for his visually striking and often brutal films, Refn brings his signature style to this dark and twisted tale of ambition and beauty.',
 		description: 'Description of episode',

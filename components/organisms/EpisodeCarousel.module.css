@@ -1,0 +1,31 @@
+.sectionContainer {
+	background-color: hsl(224, 5%, 5%);
+}
+
+.centering {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.sectionName {
+	color: whitesmoke;
+	width: 85vw;
+	/* color: #d82d31; */
+	padding-bottom: 3em;
+	font-style: italic;
+	font-size: x-large;
+}
+.container {
+	width: 90vw;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+}
+
+.episodeItem {
+}
