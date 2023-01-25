@@ -5,7 +5,7 @@ import EpisodeThumbnail from '../atoms/EpisodeThumbnail';
 import styles from './EpisodeCarouselItem.module.css';
 
 export default function EpisodeCarouselItem({ episode }) {
-	const { film, subtitle, shortDescription, thumbnail, title } = episode;
+	const { film, subtitle, shortDescription, thumbnail, title, slug } = episode;
 	const { title: filmTitle, releaseYear } = film;
 	return (
 		<>
@@ -17,7 +17,7 @@ export default function EpisodeCarouselItem({ episode }) {
 				</h1>
 				<h2>{subtitle}</h2>
 				<p>{shortDescription}</p>
-				<Link href={title}>Listen to episode</Link>
+				<Link href={`episodes/${slug}`}>Listen to episode</Link>
 			</div>
 		</>
 	);
@@ -33,6 +33,7 @@ EpisodeCarouselItem.propTypes = {
 		subtitle: PropTypes.string,
 		shortDescription: PropTypes.string,
 		thumbnail: PropTypes.any,
+		slug: PropTypes.string,
 	}),
 };
 
@@ -44,4 +45,5 @@ EpisodeCarouselItem.defaultProps = {
 	title: 'Episode title',
 	subtitle: 'Episode Subtitle',
 	shortDescription: 'Short episode description',
+	slug: '/',
 };
